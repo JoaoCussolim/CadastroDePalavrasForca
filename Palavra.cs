@@ -10,6 +10,12 @@ public class Palavra : IComparable<Palavra>, IRegistro
 
     string palavraInfo;
     string dica;
+    bool[] acertou = new bool[15];
+
+    public bool[] Acertou
+    {
+        get => acertou;
+    }
 
     public string PalavraInfo
     {
@@ -36,6 +42,22 @@ public class Palavra : IComparable<Palavra>, IRegistro
     {
         PalavraInfo = palavraInfo;
         Dica = dica;
+    }
+
+    public bool EstaNaPalavra(char letra)
+    {
+        bool achou = false;
+
+        for(int i = 0; i < palavraInfo.Length; i++)
+        {
+            if (palavraInfo[i] == letra)
+            {
+                acertou[i] = true;
+                achou = true;
+            }
+        }
+
+        return achou;
     }
 
     public int CompareTo(Palavra outraPalavra)

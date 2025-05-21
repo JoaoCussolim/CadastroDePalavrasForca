@@ -75,3 +75,13 @@ C:\Users\joaov\Downloads\apForca\apForca\obj\Debug\apListaLigada.csproj.Generate
 C:\Users\joaov\Downloads\apForca\apForca\obj\Debug\apListaLigada.csproj.CoreCompileInputs.cache
 C:\Users\joaov\Downloads\apForca\apForca\obj\Debug\apListaLigada.exe
 C:\Users\joaov\Downloads\apForca\apForca\obj\Debug\apListaLigada.pdb
+C:\Users\u24136\Documents\GitHub\CadastroDePalavrasForca\bin\Debug\apListaLigada.exe.config
+C:\Users\u24136\Documents\GitHub\CadastroDePalavrasForca\bin\Debug\apListaLigada.exe
+C:\Users\u24136\Documents\GitHub\CadastroDePalavrasForca\bin\Debug\apListaLigada.pdb
+C:\Users\u24136\Documents\GitHub\CadastroDePalavrasForca\obj\Debug\apListaLigada.csproj.AssemblyReference.cache
+C:\Users\u24136\Documents\GitHub\CadastroDePalavrasForca\obj\Debug\apListaLigada.FrmAlunos.resources
+C:\Users\u24136\Documents\GitHub\CadastroDePalavrasForca\obj\Debug\apListaLigada.Properties.Resources.resources
+C:\Users\u24136\Documents\GitHub\CadastroDePalavrasForca\obj\Debug\apListaLigada.csproj.GenerateResource.cache
+C:\Users\u24136\Documents\GitHub\CadastroDePalavrasForca\obj\Debug\apListaLigada.csproj.CoreCompileInputs.cache
+C:\Users\u24136\Documents\GitHub\CadastroDePalavrasForca\obj\Debug\apListaLigada.exe
+C:\Users\u24136\Documents\GitHub\CadastroDePalavrasForca\obj\Debug\apListaLigada.pdb
