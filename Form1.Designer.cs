@@ -28,6 +28,7 @@
     /// </summary>
     private void InitializeComponent()
     {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAlunos));
             this.label2 = new System.Windows.Forms.Label();
             this.txtPalavra = new System.Windows.Forms.TextBox();
@@ -57,14 +58,34 @@
             this.rbFrente = new System.Windows.Forms.RadioButton();
             this.lsbDados = new System.Windows.Forms.ListBox();
             this.tpForca = new System.Windows.Forms.TabPage();
+            this.labelNome = new System.Windows.Forms.Label();
+            this.LabelSubtituloForca = new System.Windows.Forms.Label();
+            this.LabelForca = new System.Windows.Forms.Label();
+            this.Corda4 = new System.Windows.Forms.PictureBox();
+            this.Corda3 = new System.Windows.Forms.PictureBox();
+            this.Corda2 = new System.Windows.Forms.PictureBox();
+            this.Corda1 = new System.Windows.Forms.PictureBox();
+            this.JuncaoForca = new System.Windows.Forms.PictureBox();
+            this.BaseForca2 = new System.Windows.Forms.PictureBox();
+            this.BaseForca = new System.Windows.Forms.PictureBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.slRegistro = new System.Windows.Forms.ToolStripStatusLabel();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tpCadastro.SuspendLayout();
             this.tpListagem.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.tpForca.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Corda4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Corda3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Corda2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Corda1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.JuncaoForca)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BaseForca2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BaseForca)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -121,7 +142,7 @@
             this.btnSair});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(634, 42);
+            this.toolStrip1.Size = new System.Drawing.Size(714, 42);
             this.toolStrip1.TabIndex = 21;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -251,7 +272,7 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 55);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(617, 326);
+            this.tabControl1.Size = new System.Drawing.Size(697, 426);
             this.tabControl1.TabIndex = 22;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
@@ -264,7 +285,7 @@
             this.tpCadastro.Location = new System.Drawing.Point(4, 26);
             this.tpCadastro.Name = "tpCadastro";
             this.tpCadastro.Padding = new System.Windows.Forms.Padding(3);
-            this.tpCadastro.Size = new System.Drawing.Size(609, 296);
+            this.tpCadastro.Size = new System.Drawing.Size(689, 396);
             this.tpCadastro.TabIndex = 0;
             this.tpCadastro.Text = "Cadastro";
             this.tpCadastro.UseVisualStyleBackColor = true;
@@ -285,7 +306,7 @@
             this.tpListagem.Location = new System.Drawing.Point(4, 22);
             this.tpListagem.Name = "tpListagem";
             this.tpListagem.Padding = new System.Windows.Forms.Padding(3);
-            this.tpListagem.Size = new System.Drawing.Size(609, 300);
+            this.tpListagem.Size = new System.Drawing.Size(689, 400);
             this.tpListagem.TabIndex = 1;
             this.tpListagem.Text = "Listagem";
             this.tpListagem.UseVisualStyleBackColor = true;
@@ -336,13 +357,124 @@
             // 
             // tpForca
             // 
-            this.tpForca.Location = new System.Drawing.Point(4, 22);
+            this.tpForca.Controls.Add(this.textBox1);
+            this.tpForca.Controls.Add(this.labelNome);
+            this.tpForca.Controls.Add(this.LabelSubtituloForca);
+            this.tpForca.Controls.Add(this.LabelForca);
+            this.tpForca.Controls.Add(this.Corda4);
+            this.tpForca.Controls.Add(this.Corda3);
+            this.tpForca.Controls.Add(this.Corda2);
+            this.tpForca.Controls.Add(this.Corda1);
+            this.tpForca.Controls.Add(this.JuncaoForca);
+            this.tpForca.Controls.Add(this.BaseForca2);
+            this.tpForca.Controls.Add(this.BaseForca);
+            this.tpForca.Location = new System.Drawing.Point(4, 26);
             this.tpForca.Name = "tpForca";
             this.tpForca.Padding = new System.Windows.Forms.Padding(3);
-            this.tpForca.Size = new System.Drawing.Size(609, 300);
+            this.tpForca.Size = new System.Drawing.Size(689, 396);
             this.tpForca.TabIndex = 2;
             this.tpForca.Text = "Forca";
             this.tpForca.UseVisualStyleBackColor = true;
+            // 
+            // labelNome
+            // 
+            this.labelNome.AutoSize = true;
+            this.labelNome.Font = new System.Drawing.Font("Arial", 12F);
+            this.labelNome.Location = new System.Drawing.Point(364, 114);
+            this.labelNome.Name = "labelNome";
+            this.labelNome.Size = new System.Drawing.Size(83, 18);
+            this.labelNome.TabIndex = 9;
+            this.labelNome.Text = "Seu nome:";
+            // 
+            // LabelSubtituloForca
+            // 
+            this.LabelSubtituloForca.AutoSize = true;
+            this.LabelSubtituloForca.Font = new System.Drawing.Font("Arial", 15F);
+            this.LabelSubtituloForca.Location = new System.Drawing.Point(445, 76);
+            this.LabelSubtituloForca.Name = "LabelSubtituloForca";
+            this.LabelSubtituloForca.Size = new System.Drawing.Size(169, 23);
+            this.LabelSubtituloForca.TabIndex = 8;
+            this.LabelSubtituloForca.Text = "Adivinhe a palavra";
+            // 
+            // LabelForca
+            // 
+            this.LabelForca.AutoSize = true;
+            this.LabelForca.Font = new System.Drawing.Font("Arial", 30F);
+            this.LabelForca.Location = new System.Drawing.Point(465, 31);
+            this.LabelForca.Name = "LabelForca";
+            this.LabelForca.Size = new System.Drawing.Size(135, 45);
+            this.LabelForca.TabIndex = 7;
+            this.LabelForca.Text = "Forca!";
+            // 
+            // Corda4
+            // 
+            this.Corda4.BackColor = System.Drawing.Color.Transparent;
+            this.Corda4.Image = global::apListaLigada.Properties.Resources.Forca__09;
+            this.Corda4.Location = new System.Drawing.Point(128, 182);
+            this.Corda4.Name = "Corda4";
+            this.Corda4.Size = new System.Drawing.Size(129, 55);
+            this.Corda4.TabIndex = 6;
+            this.Corda4.TabStop = false;
+            // 
+            // Corda3
+            // 
+            this.Corda3.BackColor = System.Drawing.Color.Transparent;
+            this.Corda3.Image = global::apListaLigada.Properties.Resources.Forca__08;
+            this.Corda3.Location = new System.Drawing.Point(128, 166);
+            this.Corda3.Name = "Corda3";
+            this.Corda3.Size = new System.Drawing.Size(129, 69);
+            this.Corda3.TabIndex = 5;
+            this.Corda3.TabStop = false;
+            // 
+            // Corda2
+            // 
+            this.Corda2.BackColor = System.Drawing.Color.Transparent;
+            this.Corda2.Image = global::apListaLigada.Properties.Resources.Forca__05;
+            this.Corda2.Location = new System.Drawing.Point(119, 76);
+            this.Corda2.Name = "Corda2";
+            this.Corda2.Size = new System.Drawing.Size(129, 90);
+            this.Corda2.TabIndex = 4;
+            this.Corda2.TabStop = false;
+            // 
+            // Corda1
+            // 
+            this.Corda1.BackColor = System.Drawing.Color.Transparent;
+            this.Corda1.Image = global::apListaLigada.Properties.Resources.Forca__02;
+            this.Corda1.Location = new System.Drawing.Point(128, 21);
+            this.Corda1.Name = "Corda1";
+            this.Corda1.Size = new System.Drawing.Size(129, 55);
+            this.Corda1.TabIndex = 3;
+            this.Corda1.TabStop = false;
+            // 
+            // JuncaoForca
+            // 
+            this.JuncaoForca.BackColor = System.Drawing.Color.Transparent;
+            this.JuncaoForca.Image = global::apListaLigada.Properties.Resources.Forca__01;
+            this.JuncaoForca.Location = new System.Drawing.Point(6, 21);
+            this.JuncaoForca.Name = "JuncaoForca";
+            this.JuncaoForca.Size = new System.Drawing.Size(129, 55);
+            this.JuncaoForca.TabIndex = 2;
+            this.JuncaoForca.TabStop = false;
+            // 
+            // BaseForca2
+            // 
+            this.BaseForca2.BackColor = System.Drawing.Color.Transparent;
+            this.BaseForca2.Image = global::apListaLigada.Properties.Resources.Forca__03;
+            this.BaseForca2.Location = new System.Drawing.Point(6, 76);
+            this.BaseForca2.Name = "BaseForca2";
+            this.BaseForca2.Size = new System.Drawing.Size(129, 157);
+            this.BaseForca2.TabIndex = 1;
+            this.BaseForca2.TabStop = false;
+            // 
+            // BaseForca
+            // 
+            this.BaseForca.BackColor = System.Drawing.Color.Transparent;
+            this.BaseForca.Image = global::apListaLigada.Properties.Resources.Forca__13;
+            this.BaseForca.Location = new System.Drawing.Point(6, 233);
+            this.BaseForca.Name = "BaseForca";
+            this.BaseForca.Size = new System.Drawing.Size(53, 160);
+            this.BaseForca.TabIndex = 0;
+            this.BaseForca.TabStop = false;
             // 
             // statusStrip1
             // 
@@ -350,9 +482,9 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.slRegistro});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 387);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 487);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(634, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(714, 22);
             this.statusStrip1.TabIndex = 23;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -368,10 +500,23 @@
             this.slRegistro.Size = new System.Drawing.Size(70, 17);
             this.slRegistro.Text = "Registro:0/0";
             // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(449, 114);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(212, 24);
+            this.textBox1.TabIndex = 10;
+            // 
             // FrmAlunos
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(634, 409);
+            this.ClientSize = new System.Drawing.Size(714, 509);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.toolStrip1);
@@ -388,6 +533,15 @@
             this.tpListagem.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.tpForca.ResumeLayout(false);
+            this.tpForca.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Corda4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Corda3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Corda2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Corda1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.JuncaoForca)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BaseForca2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BaseForca)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -427,6 +581,18 @@
     private System.Windows.Forms.ToolStripStatusLabel slRegistro;
     private System.Windows.Forms.Label label1;
     private System.Windows.Forms.TabPage tpForca;
-  }
+        private System.Windows.Forms.PictureBox BaseForca;
+        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.PictureBox BaseForca2;
+        private System.Windows.Forms.PictureBox JuncaoForca;
+        private System.Windows.Forms.PictureBox Corda4;
+        private System.Windows.Forms.PictureBox Corda3;
+        private System.Windows.Forms.PictureBox Corda2;
+        private System.Windows.Forms.PictureBox Corda1;
+        private System.Windows.Forms.Label LabelSubtituloForca;
+        private System.Windows.Forms.Label LabelForca;
+        private System.Windows.Forms.Label labelNome;
+        private System.Windows.Forms.TextBox textBox1;
+    }
 }
 

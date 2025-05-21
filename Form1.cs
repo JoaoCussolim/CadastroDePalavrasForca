@@ -14,11 +14,6 @@ namespace apListaLigada
             InitializeComponent();
         }
 
-        private void btnLerArquivo1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void FazerLeitura(ref ListaDupla<Palavra> qualLista)
         {
             qualLista = new ListaDupla<Palavra>();  // recria a lista a ser lida
