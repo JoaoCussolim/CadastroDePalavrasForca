@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace apListaLigada
@@ -13,6 +15,13 @@ namespace apListaLigada
         {
             InitializeComponent();
         }
+        bool jogando = false;
+        bool comDica = false;
+        string PalavraAtual = "";
+        int tempo = 30;
+        int ponto = 0;
+        int erro = 0;
+        PictureBox[] imagens;
 
         private void FazerLeitura(ref ListaDupla<Palavra> qualLista)
         {
@@ -208,6 +217,89 @@ namespace apListaLigada
             if (tabControl1.SelectedIndex == 1)
             {
                 rbFrente.PerformClick();
+            }
+        }
+
+        private void btnIniciar_Click(object sender, EventArgs e)
+        {
+            imagens = new PictureBox[] {forca_1, forca_2,forca_3,forca_4,forca_5,forca_6,forca_7,forca_8};
+            jogando = true;
+            Random rng = new Random();
+            tempo = 30;
+            erro = 0;
+            ponto = 0;
+            lblTempo.Text = tempo.ToString();
+            lblPonto.Text = ponto.ToString();
+            lblErros.Text = erro.ToString();
+            int ind = rng.Next(lista1.QuantosNos);
+            lista1.PosicionarNoInicio();
+            for (int i = 0; i < ind; i++) lista1.Avancar();
+            PalavraAtual = lista1.Atual.Info.PalavraInfo.TrimEnd().ToUpper();
+            dicaChck.Enabled = false;
+            if (comDica)
+            {
+                timer.Enabled = true;
+                dicaTxt.Text = lista1.Atual.Info.Dica;
+            }
+            gridGastas.Columns.Clear();
+            gridGastas.ColumnCount = PalavraAtual.Length;
+            foreach(DataGridViewColumn column in gridGastas.Columns)
+            {
+                column.Width = 25;
+            }
+
+        }
+
+        private void dicaChck_CheckedChanged(object sender, EventArgs e)
+        {
+            comDica = dicaChck.Checked;
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            tempo--;
+            lblTempo.Text = tempo.ToString();
+        }
+
+
+        private void btnLetra_Click(object sender, EventArgs e)
+        {
+            Button botaoClicado = sender as Button;
+            if (jogando)
+            {
+                botaoClicado.Enabled = false;
+                if (PalavraAtual.Contains(botaoClicado.Text))
+                {
+                    ponto++;
+                    lblPonto.Text = ponto.ToString();
+
+                    for (int i = 0; i < PalavraAtual.Length; i++)
+                    {
+                        if (PalavraAtual[i].ToString() == botaoClicado.Text)
+                        {
+                            gridGastas.Rows[0].Cells[i].Value = botaoClicado.Text;
+                        }
+                    }
+                }
+                else
+                {
+                    erro++;
+                    if (erro >= 9)
+                    {
+                        forcadead_1.Visible = true;
+                        forca_1.Visible = false;
+                        forcadead_2.Visible = true;
+                    }
+                    else
+                    {
+                        imagens[erro - 1].Visible = true;
+                        
+                        lblErros.Text = erro.ToString();
+                    }
+                    
+                        
+                    
+                }
             }
         }
     }
